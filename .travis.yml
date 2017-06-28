@@ -1,3 +1,5 @@
 language: objective-c
 xcode_project: TestApp.xcodeproj
 xcode_scheme: TestAppTests
+
+install: travis_wait xctool -project TestApp.xcodeproj -scheme TestAppTests build test
