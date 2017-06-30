@@ -1,4 +1,6 @@
 language: objective-c
 xcode_scheme: TestAppTests
 
+install: pod install
+
 script: travis_wait xctool -workspace TestApp.xcworkspace -scheme TestApp -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build test
