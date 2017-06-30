@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import TestApp
+import Device
 
 class TestAppTests: XCTestCase {
     
@@ -27,6 +28,11 @@ class TestAppTests: XCTestCase {
         print("Hello, World\n")
         XCTAssert(1 == 1)
     }
+
+	func testDoWeHaveCocoapods() {
+		print("testing cocoapods\n")
+		XCTAssert(Device.size() == Device.size())
+	}
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
