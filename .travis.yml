@@ -2,4 +2,4 @@ language: objective-c
 xcode_project: TestApp.xcodeproj
 xcode_scheme: TestAppTests
 
-install: travis_wait xctool -project TestApp.xcodeproj -scheme TestApp -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build test
+script: travis_wait xctool -project TestApp.xcodeproj -scheme TestApp -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build test
