@@ -4,7 +4,7 @@ use_frameworks!
 
 def pods()
 
-    pod "Device", '~> 3.0.1'
+    pod "Device"
 end
 
 target 'TestApp' do
