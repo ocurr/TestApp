@@ -1,6 +1,9 @@
 language: objective-c
 xcode_scheme: TestAppTests
 
+before_install:
+    - gem install cocoapods -v '1.2.1'
+
 install: pod install
 
 script: travis_wait xctool -workspace TestApp.xcworkspace -scheme TestApp -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build test
