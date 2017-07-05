@@ -8,16 +8,9 @@ def pods()
 end
 
 target 'TestApp' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-
-  # Pods for TestApp
-
-  pods()
-
-  target 'TestAppTests' do
-    inherit! :search_paths
-    # Pods for testing
     pods()
-  end
+end
 
+target 'TestAppTests' do
+    pods()
 end
