@@ -5,10 +5,12 @@ osx_image: xcode8.3
 
 before_install:
     - gem install cocoapods -v '1.2.1'
+    - brew update
+    - brew outdated xctool || brew upgrade xctool
 
 install:
     - pod repo update
     - pod update
     - pod install
 
-script: travis_wait xctool -workspace TestApp.xcworkspace -scheme TestApp -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build test
+script: travis_wait xctool -workspace TestApp.xcworkspace -scheme TestApp -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO run-tests
