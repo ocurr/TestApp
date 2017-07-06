@@ -13,4 +13,6 @@ install:
     - pod update
     - pod install
 
-script: travis_wait xctool -workspace TestApp.xcworkspace -scheme TestApp -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO run-tests
+script:
+    - xcodebuild -workspace TestApp.xcworkspace -scheme TestApp -sdk iphonesimulator build-for-testing
+    - travis_wait xctool -workspace TestApp.xcworkspace -scheme TestApp -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO run-tests
