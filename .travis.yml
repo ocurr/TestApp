@@ -1,6 +1,8 @@
 language: objective-c
 xcode_scheme: TestAppTests
 
+osx_image: xcode8.3
+
 before_install:
     - gem install cocoapods -v '1.2.1'
 
