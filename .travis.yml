@@ -9,7 +9,7 @@ before_install:
     - brew outdated xctool || brew upgrade xctool
 
 install:
-    - pod update
+    - pod install --repo-update
 
 script:
     - xcodebuild -workspace TestApp.xcworkspace -scheme TestApp -sdk iphonesimulator build-for-testing
